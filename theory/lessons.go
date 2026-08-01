@@ -5,6 +5,9 @@ import (
 )
 
 func main()  {
+	fmt.Println("Hello, World")
+
+	// День 2. Переменные, типы данных и ввод
 	// Задание 1, 2
 	name := "Amin"
 	age := 17
