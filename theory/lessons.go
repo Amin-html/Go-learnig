@@ -40,4 +40,7 @@ func main()  {
 	fmt.Println("Hello! 👋", name2)
 	fmt.Println("You", age2, "years old.")
 	fmt.Println("Your favorite language", favoriteLanguage)
+
+	// 📚 День 3. Условия (if, else, switch)
+	
 }
