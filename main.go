@@ -5,103 +5,62 @@ import (
 )
 
 func main()  {
-	// 🎯 Мини-проект №1, Задание 1
-	age := 0
-
-	fmt.Print("Введите возраст:")
-	fmt.Scan(&age)
-
-	if age >= 18 {
-		fmt.Println("Доступ разрешен ✅")
-	} else {
-		fmt.Println("Доступ запрещен ❌")
+	// 🎯 Мини-проект №1 — Таблица умножения
+	for i := 1; i <= 10; i++ {
+		result := 5 * i
+		fmt.Printf("5 x %d = %d\n", i, result)
 	}
 
-	// 🎯 Мини-проект №2, Задание 5 ⭐
-	num1 := 0
-	num2 := 0
-	operator := ""
+	// 🎯 Мини-проект №2 — Сумма чисел
+	sum := 0
+	for i := 1; i <= 100; i++ {
+		sum += i
+	}
+	fmt.Printf("Sum: %d\n", sum)
 
-	fmt.Print("Введите первое число: ")
-	fmt.Scan(&num1)
-	fmt.Print("Введите второе число: ")
-	fmt.Scan(&num2)
-	fmt.Print("Введите оператор (+, -, *, /): ")
-	fmt.Scan(&operator)
-
-	switch operator {
-	case "+":
-		fmt.Println("Результат:", num1 + num2)
-
-	case "-":
-		fmt.Println("Результат:", num1 - num2)
-
-	case "*":
-		fmt.Println("Результат:", num1 * num2)
-
-	case "/":
-		if num2 !=0 {
-			fmt.Println("Результат:", num1 / num2)
-		} else {
-			fmt.Println("Ошибка: деление на ноль ❌")
+	// 🎯 Мини-проект №3 — Четные числа
+	for i := 1; i <= 50; i++ {
+		if i%2 == 0 {
+			fmt.Printf("%d is even\n", i)
 		}
-	
-	default:
-		fmt.Println("Ошибка: неверный оператор ❌")
+	}
+
+	// Задание 1
+	for i := 1; i <= 20; i++ {
+		fmt.Printf("№: %d\n", i)
 	}
 
 	// Задание 2
-	userName := ""
-	password := ""
-
-	fmt.Print("Введите имя пользователя: ")
-	fmt.Scan(&userName)
-	fmt.Print("Введите пароль: ")
-	fmt.Scan(&password)
-
-	if userName == "admin" && password == "admin123" {
-		fmt.Println("Доступ разрешен ✅")
-	} else {
-		fmt.Println("Ошибка: неверное имя пользователя или пароль ❌	")
+	for i := 20; i >= 1; i-- {
+		fmt.Printf("№: %d\n", i)
 	}
 
-	// Задание 3
-	day := 0
-
-	fmt.Print("Введите номер дня недели (1-7): ")
-	fmt.Scan(&day)
-
-	switch day {
-	case 1:
-		fmt.Println("Понедельник")
-	case 2:
-		fmt.Println("Вторник")
-	case 3:
-		fmt.Println("Среда")
-	case 4:
-		fmt.Println("Четверг")
-	case 5:
-		fmt.Println("Пятница")
-	case 6:
-		fmt.Println("Суббота")
-	case 7:
-		fmt.Println("Воскресенье")
-	default:
-		fmt.Println("Ошибка: неверный день недели ❌")
+	// Задание 3, 4
+	for i := 1; i <= 30; i++ {
+		if i == 15 {
+			continue
+		} else if i == 18 {
+			break
+		}
+		fmt.Printf("№: %d\n", i)
 	}
 
-	// Задание 4
-	UserID := 0
-	isTicketAvailable := false
+	// Задание 5 ⭐
+	for i := 1; i<= 10; i++ {
+		for j := 1; j <= 10; j++ {
+			fmt.Print("*")
+		}
+		fmt.Println()
+	}
 
-	fmt.Print("Введите ваш ID: ")
-	fmt.Scan(&UserID)
-	fmt.Print("Доступен ли билет? (true/false): ")
-	fmt.Scan(&isTicketAvailable)
+	// ⭐ Дополнительное задание (для портфолио)
+	usernum := 0
 
-	if UserID == 3 && isTicketAvailable == true {
-		fmt.Println("Есть билет ✅")
-	} else {
-		fmt.Println("Доступ запрещен ❌")
+	fmt.Print("Введите число: ")
+	fmt.Scan(&usernum)
+
+	for i := 1; i <= 10; i++ {
+		result := usernum * i
+		fmt.Printf("%d x %d = %d\n", usernum, i, result)
 	}
 }
