@@ -1,76 +1,33 @@
-# Go Learning 🚀
+# Go Learning
 
-Мой путь изучения Go с нуля.
+Мой путь изучения Go.
 
-## 🎯 Цель
+## Пройденные темы
 
-Изучить Go и создать backend-проекты с использованием:
+## Lessons
 
-- Go
-- Git
-- GitHub
-- Docker
-- PostgreSQL
-- REST API
-- JWT
-- Redis
+- ✅ Lesson 1 — Hello World
+- ✅ Lesson 2 — Variables
+- ✅ Lesson 3 — Conditions
+- ✅ Lesson 4 — Loops
+- ✅ Lesson 5 — Functions
 
----
+## Мини-проекты
 
-## 📚 Прогресс
+- Калькулятор
+- Проверка возраста
+- Авторизация
+- Таблица умножения
+- Сумма чисел
+- Вывод четных чисел
+- Мини-калькулятор с функциями
 
-- [x] Lesson 1 - Git, GitHub, Go Modules
-- [x] Lesson 2 - Variables, Constants, Input, Output
-- [ ] Lesson 3 - If, Else, Switch
-- [ ] Lesson 4 - Loops
-- [ ] Lesson 5 - Functions
-- [ ] Lesson 6 - Arrays & Slices
-- [ ] Lesson 7 - Maps
-- [ ] Lesson 8 - Structs
-- [ ] Lesson 9 - Interfaces
-- [ ] Lesson 10 - Goroutines
+## Стек
 
----
-
-## 📂 Структура проекта
-
-```
-Go-learning/
-│
-├── theory/
-├── main.go
-├── go.mod
-├── go.sum
-└── README.md
-```
-
----
-
-## 🛠 Используемые технологии
-
-- Go
+- Go 1.26
 - Git
 - GitHub
 
----
+## Цель
 
-## 📅 История
-
-### Day 1
-- Создал первый Go-проект.
-- Настроил Git.
-- Создал репозиторий GitHub.
-- Изучил go.mod.
-
-### Day 2
-- Переменные.
-- Константы.
-- fmt.Printf().
-- fmt.Scan().
-- Первая зависимость (`github.com/google/uuid`).
-
----
-
-## 🚀 Автор
-
-GitHub: https://github.com/Amin-html
+Стать Junior Backend Developer.
