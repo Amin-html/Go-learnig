@@ -2,25 +2,23 @@
 
 Мой путь изучения Go.
 
-## Пройденные темы
-
 ## Lessons
 
-- ✅ Lesson 1 — Hello World
-- ✅ Lesson 2 — Variables
-- ✅ Lesson 3 — Conditions
-- ✅ Lesson 4 — Loops
-- ✅ Lesson 5 — Functions
+- [x] Lesson 1 — Hello World
+- [x] Lesson 2 — Variables
+- [x] Lesson 3 — if / switch
+- [x] Lesson 4 — Loops
+- [x] Lesson 5 — Functions
+- [x] Lesson 6 — Arrays & Slices
 
-## Мини-проекты
+## Mini Projects
 
-- Калькулятор
-- Проверка возраста
-- Авторизация
-- Таблица умножения
-- Сумма чисел
-- Вывод четных чисел
-- Мини-калькулятор с функциями
+- Calculator
+- Login System
+- Multiplication Table
+- Number Sum
+- Even Numbers
+- Functions Calculator
 
 ## Стек
 
