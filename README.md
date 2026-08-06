@@ -6,10 +6,11 @@
 
 - [x] Lesson 1 — Hello World
 - [x] Lesson 2 — Variables
-- [x] Lesson 3 — if / switch
+- [x] Lesson 3 — If / Switch
 - [x] Lesson 4 — Loops
 - [x] Lesson 5 — Functions
 - [x] Lesson 6 — Arrays & Slices
+- [x] Lesson 7 — Maps
 
 ## Mini Projects
 
