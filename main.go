@@ -4,149 +4,135 @@ import (
 	"fmt"
 )
 
+// 🎯 Мини-проект №1 — User
+type User struct {
+	Name string
+	Age int
+	Country string
+}
+
+// 🎯 Мини-проект №2 — Car
+type Car struct {
+	Brand string
+	Model string
+	Year int
+}
+
+// 🎯 Мини-проект №3 — Game
+type Game struct {
+	Name string
+	Genre string
+	Year int
+}
+
+// Задание 1
+type Student struct {
+	Name string
+	Age int
+	Course int
+}
+
+// Задание 3
+func printStudent(student Student) {
+	fmt.Println("Hello! 👋👋", student.Name, student.Age, student.Course)
+}
+
+// Задание 4
+type Product struct {
+	Name string
+	Price float64
+	Stock int
+}
+
+// ⭐ Задание 5
+type UserCheckAge struct {
+	Name string
+	Age int
+}
+
 func main() {
-	// Задание 1
-	students := map[string]int{
-		"Amin": 17,
-		"Ali": 18,
-		"Alina": 16,
+	// 🎯 Мини-проект №1 — User
+	user := User{"Amin", 17, "Kyrgyzstan"}
+
+	fmt.Println(user.Name)
+	fmt.Println(user.Age)
+	fmt.Println(user.Country)
+
+	// 🎯 Мини-проект №2 — Car
+	car := Car{"Toyota", "Camry", 2020}
+
+	fmt.Println(car.Brand)
+	fmt.Println(car.Model)
+	fmt.Println(car.Year)
+
+	// 🎯 Мини-проект №3 — Game
+	game1 := Game{"The Legend of Zelda", "Action-Adventure", 1986}
+	game2 := Game{"Minecraft", "Sandbox", 2011}
+	game3 := Game{"Tetris", "Puzzle", 1984}
+
+	games := []Game{
+		game1,
+		game2,
+		game3,
 	}
 
-	for student, age := range students {
-		fmt.Println(student, "-", age)
+	for _, game := range games{
+		fmt.Println(game.Name, game.Genre, game.Year)
 	}
 
-	// Задание 2
-	var name string
-	fmt.Print("Enter to your name: ")
-	fmt.Scan(&name)
+	// Задание 1, 2
+	student1 := Student{"Алексей", 19, 1}
+	student2 := Student{"Мария", 21, 3}
+	student3 := Student{"Иван", 20, 2}
 
-	search, ok := students[name]
+	students := []Student{
+		student1,
+		student2,
+		student3,
+	}
 
-	if ok {
-		fmt.Println(search)
-	} else {
-		fmt.Println("Student not found")
+	for _, student := range students{
+		fmt.Println(student.Name, student.Age, student.Course)
 	}
 
 	// Задание 3
-	phones := map[string]string{
-		"Any": "+996700111111",
-		"Alex": "+996700222222",
-		"Emmi": "+996700333333",
-		"Ren": "+996700444444",
-		"Ali": "+986700555555",
-	}
-
-	phone, ok := phones[name]
-
-	if ok {
-		fmt.Println(phone)
-	} else {
-		fmt.Println("Student not found")
-	}
+	printStudent(student1)
 
 	// Задание 4
-	products := map[string]float64 {
-		"Apple": 50.0,
-		"Milk": 77.9,
-		"Bread": 87.3,
-		"Water": 13.9,
-		"Coffee": 43.0,
+	product1 := Product{"Ноутбук", 1299.99, 15}
+	product2 := Product{"Смартфон", 699.50, 42}
+	product3 := Product{"Наушники",  89.00, 120}
+
+	products := []Product{
+		product1,
+		product2,
+		product3,
 	}
 
-	sum := 0.0
+	maxPrice := products[0]
 
-	for _, price := range products {
-		sum += float64(price)
-	}
-	fmt.Println("Sum: ", sum)
-
-	// ⭐ Задание 5
-	dictionary := map[string]string {
-		"Go": "язык программирования",
-		"Docker": "контейнеризация",
-		"Git": "система контроля версий",
-	}
-
-	var word string
-
-	fmt.Print("Enter to words: ")
-	fmt.Scan(&word)
-
-	words, ok := dictionary[word]
-
-	if ok {
-		fmt.Println(words)
-	} else {
-		fmt.Println("Not found")
-	}
-
-	db()
-}
-
-// ⭐ Дополнительное задание (для портфолио)
-func db() {
-	mini_DB := map[string]int{}
-
-	for {
-			var operator int
-
-		fmt.Println("1 add \n2 get \n3 delete \n4 list \n0 exit")
-
-		fmt.Print("Emter to operator(1-0): ")
-		fmt.Scan(&operator)
-
-		switch operator {
-		case 1:
-			var newName string
-			var newAge int
-
-			fmt.Println("Enter to name: ")
-			fmt.Scan(&newName)
-			fmt.Println("Enter to age: ")
-			fmt.Scan(&newAge)
-
-			mini_DB[newName] = newAge
-			fmt.Println("Ok ✅")
-			fmt.Println()
-		case 2:
-			var searchName string
-			fmt.Print("Enter to name: ")
-			fmt.Scan(&searchName)
-
-			age, ok := mini_DB[searchName]
-			if ok {
-				fmt.Println(age)
-			} else {
-				fmt.Println("map")
-			}
-		case 3:
-			var name string
-			fmt.Println("Введите имя для удаления: ")
-			fmt.Scan(&name)
-
-			_, ok := mini_DB[name]
-			if ok {
-				delete(mini_DB, name)
-				fmt.Println("Пользователь удален.")
-			} else {
-				fmt.Println("Пользователь не найден.")
-			}
-		case 4:
-			if len(mini_DB) == 0 {
-				fmt.Println("База данных пуста.")
-				continue
-			}
-			fmt.Println("Список пользователей:")
-			for name, age := range mini_DB {
-				fmt.Printf("- %s: %d\n", name, age)
-			}
-		case 0:
-			fmt.Println("Программа завершена.")
-			return
-		default:
-			fmt.Println("Неверный ввод. Попробуйте снова.")
+	for _, product := range products {
+		if product.Price > maxPrice.Price {
+			maxPrice = product
 		}
 	}
+	fmt.Println(maxPrice.Name)
+
+	// ⭐ Задание 5
+
+	users := []UserCheckAge{
+		{"Amin", 17},
+		{"Ali", 18},
+		{"Renni", 20},
+		{"Lol", 16},
+		{"Max", 19},
+	}
+
+	for _, user := range users {
+		if user.Age >= 18 {
+			fmt.Println(user.Name)
+		}
+		
+	}
+	
 }

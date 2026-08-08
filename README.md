@@ -11,6 +11,7 @@
 - [x] Lesson 5 — Functions
 - [x] Lesson 6 — Arrays & Slices
 - [x] Lesson 7 — Maps
+- [x] Lesson 8 — Structs
 
 ## Mini Projects
 
